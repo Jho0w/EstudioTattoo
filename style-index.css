@@ -107,7 +107,7 @@ body{
   max-height: 100%;
   left:-30px;
   
-  background-image: url("https://github.com/Jho0w/EstudioTattoo/blob/master/images/backgroundTattoo.jpg");
+  background-image: url("./images/backgroundTattoo.jpg");
   background-repeat: no-repeat;
   background-position: top center;
   background-size: cover;
