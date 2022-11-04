@@ -1,0 +1,261 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: #000000;
+    text-decoration: none;
+}
+
+.group{
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 30px;
+  margin-left: 100px;
+}
+
+/* galeria start */
+
+.container-galeria{
+  position:relative;
+  border-width:2px;
+  width:40%;
+  display: grid;
+  grid-template-columns: repeat(2,1fr);
+  
+  padding: 30px 0 0px 30px;
+  grid-gap: 5px;
+}
+
+.item-galeria{
+  position: relative;
+  max-height: 300px;
+  max-width: 300px;
+}
+
+.item-galeria .img-galeria{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.item-galeria .title-galeria{
+  position: absolute;
+  background-color: rgba(0,0,0,0.8);
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+}
+
+.item-galeria .escrita-galeria{
+  text-decoration: none;
+  color: white;
+  padding: 10px;
+  color: rgba(255, 255, 255, 0.781)
+}
+
+.item-galeria .escrita-galeria:hover{
+  color:#FFE600;
+}
+
+.h-1{
+  grid-row: span 1;
+}
+
+.h-2{
+  grid-row: span 2;
+}
+
+.w-1{
+  grid-column: span 1;
+}
+
+.w-2{
+  grid-column: span 2;
+}
+
+/* galeria end */
+
+/* Nome start */
+#artista{
+  margin-right: 0px;
+}
+
+#artista #titulo{
+  writing-mode: vertical-rl;
+  transform: rotate(180deg);
+  margin-top: 80px;
+}
+
+#artista img{
+  margin-top: 40px;
+  margin-left: 70px;
+}
+
+/* Nome end */
+
+/* Formulário start */
+
+#formulario{
+  margin-top: 30px;
+  position: relative;
+  border-width:2px;
+  max-width: 40%;
+  max-height: 100%;
+  left:-30px;
+  
+  background-image: url("../images/backgroundTattoo.jpg");
+  background-repeat: no-repeat;
+  background-position: top center;
+  background-size: cover;
+  background-size: 100%;
+  backdrop-filter: blur(2.5px);
+  
+}
+
+#formulario .container{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+#formulario .campo{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 8px;
+}
+
+#formulario .campoRadio{
+  display: flex;
+  justify-content: space-between;
+  width: 380px;
+  font-family: 'Inter';
+  font-size: 20px;
+  color: #FFFDFD;
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 1);
+}
+
+.campo input, #ideia {
+  font-size: 1em;
+  border-radius: 5px;
+  border: none;
+  width: 400px;
+  height: 38px;
+  background-color: #000000;
+  color: #FFFDFD;
+  margin-bottom: 10px;
+  margin-top: 10px;
+  padding-left: 8px;
+}
+
+.campo input:focus, #ideia:focus{
+  background-color: #222222;
+}
+
+#ideia{
+  height: 96px;
+  padding: 8px;
+}
+
+#titulo{
+  font-family: 'Karantina', cursive;
+  color:#FFE600;
+  font-family: 'Karantina';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 88px;
+  line-height: 130px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  text-shadow: 6px 6px 4px rgba(0, 0, 0, 0.5);
+}
+
+#formulario fieldset{
+  border: none;
+}
+
+.botao{
+  align-items: center;
+  margin-top: 15px;
+}
+
+.botao1 {
+  background: #FFE600;
+  border: 0;
+  border-radius: 5px;
+  margin-bottom: 1em;
+  color: #ffffff;
+  box-shadow: 2px 2px 2px rgba(0,0,0,0.2);
+  text-shadow: 1px 1px 1px rgba(0,0,0,0.5);
+
+  width: 300px;
+  height: 38px;
+  font-family: 'Karantina';
+  font-size: 30px;
+
+  color: #000000;
+}
+
+.botao1:hover {
+  background: #CCBBFF;
+  box-shadow: inset 2px 2px 2px rgba(0,0,0,0.2);
+  text-shadow: none;
+}
+
+.botao1, select{
+  cursor: pointer;
+}
+
+/* Formulário end */
+
+@media(max-width:768px){
+  .group{
+    flex-direction: column;
+    margin-left: 0;
+    margin-bottom: 0;
+  }
+
+  #artista{
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  #artista img{
+    display: none;
+  }
+
+  #artista #titulo{
+    writing-mode: horizontal-tb;
+    transform: rotate(0deg);
+    margin-top: 10px;
+    font-size: 70px;
+    text-align: center;
+  }
+
+  .container-galeria{
+    grid-template-columns: repeat(2,1fr);
+    grid-auto-rows: 50vh;
+    width: 100%;
+  }
+
+  .h-2{
+    grid-row: span 1;
+  }
+
+  .w-2{
+    grid-column: span 1;
+  }
+
+  #formulario{
+  max-width: 100%;
+  left:0;
+  }
+}
