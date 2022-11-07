@@ -19,7 +19,7 @@ button.addEventListener("click", function(e){
   const tamanho = document.querySelector("#tamanho").value;
   var celular = "5541985216770";
 
-  var texto = "*Nome:* " + nome + "\n*Serviço:* " + content + "\n*Ideia:* " + ideia + "\n*Local:* " + local + "\n*Tamanho:* " + tamanho;
+  var texto = "Olá, Jhonnatan! Gostaria de fazer um orçamento contigo.\n*Nome:* " + nome + "\n*Serviço:* " + content + "\n*Ideia:* " + ideia + "\n*Local:* " + local + "\n*Tamanho:* " + tamanho;
   texto = window.encodeURIComponent(texto);
 
   window.open("https://api.whatsapp.com/send?phone=" + celular + "&text=" + texto, "_system");
